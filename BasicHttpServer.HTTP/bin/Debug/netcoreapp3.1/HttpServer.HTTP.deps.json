@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "HttpServer.HTTP/1.0.0": {
+        "runtime": {
+          "HttpServer.HTTP.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HttpServer.HTTP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

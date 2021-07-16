@@ -1,0 +1,9 @@
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.MvcFramework\bin\Debug\netstandard2.0\BasicHttpServer.MvcFramework.deps.json
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.MvcFramework\bin\Debug\netstandard2.0\BasicHttpServer.MvcFramework.dll
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.MvcFramework\bin\Debug\netstandard2.0\BasicHttpServer.MvcFramework.pdb
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.csproj.AssemblyReference.cache
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.AssemblyInfoInputs.cache
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.AssemblyInfo.cs
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.dll
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.pdb

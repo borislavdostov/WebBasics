@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VR5YJzoWvXl+AOQU7xBF8S8ULHpTeaipPu9IiIBpypKFjfVGCu/6MhDILqa9re3WSHCf3Rq4tzl85EokisdK1g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Pc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

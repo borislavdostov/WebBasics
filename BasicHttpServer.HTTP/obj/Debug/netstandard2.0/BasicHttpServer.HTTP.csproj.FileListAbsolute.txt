@@ -1,0 +1,9 @@
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.HTTP\bin\Debug\netstandard2.0\BasicHttpServer.HTTP.deps.json
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.HTTP\bin\Debug\netstandard2.0\BasicHttpServer.HTTP.dll
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.HTTP\bin\Debug\netstandard2.0\BasicHttpServer.HTTP.pdb
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.csproj.AssemblyReference.cache
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.AssemblyInfoInputs.cache
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.AssemblyInfo.cs
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.dll
+C:\Users\Pc\Desktop\BasicHttpServer\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.pdb

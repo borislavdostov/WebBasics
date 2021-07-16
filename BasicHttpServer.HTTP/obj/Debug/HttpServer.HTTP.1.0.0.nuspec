@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>HttpServer.HTTP</id>
+    <version>1.0.0</version>
+    <authors>HttpServer.HTTP</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\bin\Debug\netcoreapp3.1\HttpServer.HTTP.dll" target="lib\netcoreapp3.1\HttpServer.HTTP.dll" />
+  </files>
+</package>

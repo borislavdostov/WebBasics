@@ -1,0 +1,9 @@
+C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\bin\Debug\netcoreapp3.1\HttpServer.HTTP.deps.json
+C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\bin\Debug\netcoreapp3.1\HttpServer.HTTP.dll
+C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\bin\Debug\netcoreapp3.1\HttpServer.HTTP.pdb
+C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\obj\Debug\netcoreapp3.1\HttpServer.HTTP.csproj.AssemblyReference.cache
+C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\obj\Debug\netcoreapp3.1\HttpServer.HTTP.AssemblyInfoInputs.cache
+C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\obj\Debug\netcoreapp3.1\HttpServer.HTTP.AssemblyInfo.cs
+C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\obj\Debug\netcoreapp3.1\HttpServer.HTTP.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\obj\Debug\netcoreapp3.1\HttpServer.HTTP.dll
+C:\Users\Pc\Desktop\HttpServer\HttpServer.HTTP\obj\Debug\netcoreapp3.1\HttpServer.HTTP.pdb
