@@ -25,6 +25,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "BasicHttpServer.HTTP/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BasicHttpServer.HTTP.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicHttpServer.HTTP.dll": {}
+        }
       }
     }
   },
@@ -172,10 +182,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "BasicHttpServer.HTTP/1.0.0": {
+      "type": "project",
+      "path": "../BasicHttpServer.HTTP/BasicHttpServer.HTTP.csproj",
+      "msbuildProject": "../BasicHttpServer.HTTP/BasicHttpServer.HTTP.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "BasicHttpServer.HTTP >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -211,7 +227,11 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj": {
+              "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

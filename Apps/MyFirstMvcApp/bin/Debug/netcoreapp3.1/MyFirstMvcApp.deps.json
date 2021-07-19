@@ -21,6 +21,9 @@
         }
       },
       "BasicHttpServer.MvcFramework/1.0.0": {
+        "dependencies": {
+          "BasicHttpServer.HTTP": "1.0.0"
+        },
         "runtime": {
           "BasicHttpServer.MvcFramework.dll": {}
         }

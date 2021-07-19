@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "BasicHttpServer.MvcFramework/1.0.0": {
         "dependencies": {
+          "BasicHttpServer.HTTP": "1.0.0",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -19,6 +20,11 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "BasicHttpServer.HTTP/1.0.0": {
+        "runtime": {
+          "BasicHttpServer.HTTP.dll": {}
         }
       }
     }
@@ -42,6 +48,11 @@
       "sha512": "sha512-548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "BasicHttpServer.HTTP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

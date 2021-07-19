@@ -1,5 +1,4 @@
-﻿using System.IO;
-using BasicHttpServer.HTTP;
+﻿using BasicHttpServer.HTTP;
 using BasicHttpServer.MvcFramework;
 
 namespace MyFirstMvcApp.Controllers
@@ -8,9 +7,27 @@ namespace MyFirstMvcApp.Controllers
     {
         public HttpResponse Favicon(HttpRequest request)
         {
-            var fileBytes = File.ReadAllBytes("wwwroot/favicon.ico");
-            var response = new HttpResponse("image/vnd.microsoft.icon", fileBytes);
-            return response;
+            return File("wwwroot/favicon.ico", "image/vnd.microsoft.icon");
+        }
+
+        public HttpResponse BootstrapCss(HttpRequest request)
+        {
+            return File("wwwroot/css/bootstrap.min.css", "text/css");
+        }
+
+        public HttpResponse CustomCss(HttpRequest request)
+        {
+            return File("wwwroot/css/custom.css", "text/css");
+        }
+
+        public HttpResponse CustomJs(HttpRequest request)
+        {
+            return File("wwwroot/js/custom.js", "text/javascript");
+        }
+
+        public HttpResponse BootstrapJs(HttpRequest request)
+        {
+            return File("wwwroot/js/bootstrap.bundle.min.js", "text/javascript");
         }
     }
 }

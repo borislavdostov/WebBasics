@@ -1,5 +1,4 @@
-﻿using System.Text;
-using BasicHttpServer.HTTP;
+﻿using BasicHttpServer.HTTP;
 using BasicHttpServer.MvcFramework;
 
 namespace MyFirstMvcApp.Controllers
@@ -8,18 +7,13 @@ namespace MyFirstMvcApp.Controllers
     {
         public HttpResponse Login(HttpRequest request)
         {
-            var responseHtml = "<h1>Login!</h1>";
-            var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
-            var response = new HttpResponse("text/html", responseBodyBytes);
-            return response;
+            return View();
+
         }
 
         public HttpResponse Register(HttpRequest request)
         {
-            var responseHtml = "<h1>Register!</h1>";
-            var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
-            var response = new HttpResponse("text/html", responseBodyBytes);
-            return response;
+            return View();
         }
     }
 }
