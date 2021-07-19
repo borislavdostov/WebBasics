@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AMtopFDfwUbMAfPTWgJPm7kx8v441wchnY4CpaqzcCmuI+nStH0L8PLEdZgeerwfw/nCWLYuxBZQdnykfL3ZWQ==",
+  "dgSpecHash": "60vuJup5qnoq12nuKHzj49duk4oGCS8Y6ZyBDyZgg6p2Gk0IQsDBk5aqjd8lG0RKCdTAfnrdbSAS0tZcDhkvAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
+  "projectFilePath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

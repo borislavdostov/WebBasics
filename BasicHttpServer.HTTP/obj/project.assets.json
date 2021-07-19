@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj",
+      "projectUniqueName": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj",
       "projectName": "BasicHttpServer.HTTP",
-      "projectPath": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj",
+      "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj",
       "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.HTTP\\obj\\",
+      "outputPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

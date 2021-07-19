@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
+      "projectUniqueName": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
       "projectName": "MyFirstMvcApp",
-      "projectPath": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
+      "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
       "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\Apps\\MyFirstMvcApp\\obj\\",
+      "outputPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -59,8 +59,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj": {
-              "projectPath": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj"
+            "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj": {
+              "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj"
             }
           }
         }

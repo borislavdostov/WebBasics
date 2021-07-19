@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj": {}
+    "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj": {
+    "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj",
+        "projectUniqueName": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj",
         "projectName": "BasicHttpServer.MvcFramework",
-        "projectPath": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj",
+        "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj",
         "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pc\\Desktop\\BasicHttpServer\\BasicHttpServer.MvcFramework\\obj\\",
+        "outputPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
