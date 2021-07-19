@@ -1,9 +1,10 @@
 ﻿using System.IO;
 using BasicHttpServer.HTTP;
+using BasicHttpServer.MvcFramework;
 
 namespace MyFirstMvcApp.Controllers
 {
-    public class StaticFilesController
+    public class StaticFilesController : Controller
     {
         public HttpResponse Favicon(HttpRequest request)
         {

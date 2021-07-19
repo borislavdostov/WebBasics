@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "MyFirstMvcApp/1.0.0": {
         "dependencies": {
-          "BasicHttpServer.HTTP": "1.0.0"
+          "BasicHttpServer.HTTP": "1.0.0",
+          "BasicHttpServer.MvcFramework": "1.0.0"
         },
         "runtime": {
           "MyFirstMvcApp.dll": {}
@@ -17,6 +18,11 @@
       "BasicHttpServer.HTTP/1.0.0": {
         "runtime": {
           "BasicHttpServer.HTTP.dll": {}
+        }
+      },
+      "BasicHttpServer.MvcFramework/1.0.0": {
+        "runtime": {
+          "BasicHttpServer.MvcFramework.dll": {}
         }
       }
     }
@@ -28,6 +34,11 @@
       "sha512": ""
     },
     "BasicHttpServer.HTTP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BasicHttpServer.MvcFramework/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

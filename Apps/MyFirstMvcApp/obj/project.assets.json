@@ -11,6 +11,16 @@
         "runtime": {
           "bin/placeholder/BasicHttpServer.HTTP.dll": {}
         }
+      },
+      "BasicHttpServer.MvcFramework/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BasicHttpServer.MvcFramework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicHttpServer.MvcFramework.dll": {}
+        }
       }
     }
   },
@@ -19,11 +29,17 @@
       "type": "project",
       "path": "../../BasicHttpServer.HTTP/BasicHttpServer.HTTP.csproj",
       "msbuildProject": "../../BasicHttpServer.HTTP/BasicHttpServer.HTTP.csproj"
+    },
+    "BasicHttpServer.MvcFramework/1.0.0": {
+      "type": "project",
+      "path": "../../BasicHttpServer.MvcFramework/BasicHttpServer.MvcFramework.csproj",
+      "msbuildProject": "../../BasicHttpServer.MvcFramework/BasicHttpServer.MvcFramework.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "BasicHttpServer.HTTP >= 1.0.0"
+      "BasicHttpServer.HTTP >= 1.0.0",
+      "BasicHttpServer.MvcFramework >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -61,6 +77,9 @@
           "projectReferences": {
             "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj": {
               "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj"
+            },
+            "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj": {
+              "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj"
             }
           }
         }

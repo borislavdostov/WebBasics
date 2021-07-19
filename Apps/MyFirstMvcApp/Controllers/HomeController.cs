@@ -2,10 +2,11 @@
 using System.Linq;
 using System.Text;
 using BasicHttpServer.HTTP;
+using BasicHttpServer.MvcFramework;
 
 namespace MyFirstMvcApp.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
         public HttpResponse Index(HttpRequest request)
         {
