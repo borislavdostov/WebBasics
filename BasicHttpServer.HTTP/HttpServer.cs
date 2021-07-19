@@ -60,8 +60,9 @@ namespace BasicHttpServer.HTTP
                     Console.WriteLine($"{request.Method} {request.Path} => {request.Headers.Count} headers");
 
                     HttpResponse response;
-                    var route = routeTable.FirstOrDefault(r => r.Path == request.Path);
-
+                    var route = routeTable.FirstOrDefault(
+                        r => string.Compare(r.Path, request.Path, StringComparison.OrdinalIgnoreCase) == 0 &&
+                             r.Method == request.Method);
 
                     if (route != null)
                     {
@@ -76,7 +77,11 @@ namespace BasicHttpServer.HTTP
                     response.Headers.Add(new Header("Server", "BasicHttpServer 1.0"));
                     var responseHeaderBytes = Encoding.UTF8.GetBytes(response.ToString());
                     await stream.WriteAsync(responseHeaderBytes, 0, responseHeaderBytes.Length);
-                    await stream.WriteAsync(response.Body, 0, response.Body.Length);
+
+                    if (response.Body != null)
+                    {
+                        await stream.WriteAsync(response.Body, 0, response.Body.Length);
+                    }
 
                     tcpClient.Close();
                 }

@@ -6,6 +6,13 @@ namespace BasicHttpServer.HTTP
 {
     public class HttpResponse
     {
+        public HttpResponse(HttpStatusCode statusCode)
+        {
+            StatusCode = statusCode;
+            Headers = new List<Header>();
+            Cookies = new List<Cookie>();
+        }
+
         public HttpResponse(string contentType, byte[] body, HttpStatusCode statusCode = HttpStatusCode.Ok)
         {
             if (body == null)
@@ -41,7 +48,7 @@ namespace BasicHttpServer.HTTP
             {
                 responseBuilder.Append("Set-Cookie: " + cookie.ToString() + HttpConstants.NewLine);
             }
-            
+
             responseBuilder.Append(HttpConstants.NewLine);
 
             return responseBuilder.ToString();
