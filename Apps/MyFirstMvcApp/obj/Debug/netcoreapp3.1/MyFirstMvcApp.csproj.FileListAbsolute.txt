@@ -72,7 +72,6 @@ C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\BasicHttpServer.MvcFramework.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\BasicHttpServer.HTTP.pdb
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\BasicHttpServer.MvcFramework.pdb
-C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.csproj.AssemblyReference.cache
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.AssemblyInfoInputs.cache
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.AssemblyInfo.cs
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.csproj.CoreCompileInputs.cache
@@ -80,3 +79,4 @@ C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.pdb
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.genruntimeconfig.cache
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.csproj.AssemblyReference.cache
