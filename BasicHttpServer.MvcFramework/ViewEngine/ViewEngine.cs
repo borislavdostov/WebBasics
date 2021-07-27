@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
@@ -14,14 +14,31 @@ namespace BasicHttpServer.MvcFramework.ViewEngine
     {
         public string GetHtml(string templateCode, object viewModel)
         {
-            var csharpCode = GenerateCSharpFromTemplate(templateCode);
+            var csharpCode = GenerateCSharpFromTemplate(templateCode, viewModel);
             IView executableObject = GenerateExecutableCode(csharpCode, viewModel);
             var html = executableObject.ExecuteTemplate(viewModel);
             return html;
         }
 
-        private string GenerateCSharpFromTemplate(string templateCode)
+        private string GenerateCSharpFromTemplate(string templateCode, object viewModel)
         {
+            var typeOfModel = "object";
+
+            if (viewModel != null)
+            {
+                if (viewModel.GetType().IsGenericType)
+                {
+                    var modelName = viewModel.GetType().FullName;
+                    var genericArguments = viewModel.GetType().GenericTypeArguments;
+                    typeOfModel = modelName.Substring(0, modelName.IndexOf('`'))
+                                  + "<" + string.Join(",", genericArguments.Select(a => a.FullName)) + ">";
+                }
+                else
+                {
+                    typeOfModel = viewModel.GetType().FullName;
+                }
+            }
+
             var csharpCode = @"
 using System;
 using System.Text;
@@ -35,6 +52,7 @@ namespace ViewNamespace
     {
         public string ExecuteTemplate(object viewModel)
         {
+            var Model = viewModel as " + typeOfModel + @";
             var html = new StringBuilder();
 
             " + GetMethodBody(templateCode) + @"
@@ -50,16 +68,17 @@ namespace ViewNamespace
 
         private object GetMethodBody(string templateCode)
         {
+            var csharpCodeRegex = new Regex(@"[^\""\s&\'\<]+");
+            var supportedOperators = new List<string> { "for", "while", "if", "else", "foreach" };
             var csharpCode = new StringBuilder();
-            var stringReader = new StringReader(templateCode);
+            var sr = new StringReader(templateCode);
             string line;
-
-            while ((line = stringReader.ReadLine()) != null)
+            while ((line = sr.ReadLine()) != null)
             {
-                if (line.TrimStart().StartsWith("@"))
+                if (supportedOperators.Any(x => line.TrimStart().StartsWith("@" + x)))
                 {
-                    var atSignLocation = line.IndexOf("@", StringComparison.Ordinal);
-                    line = line.Remove(atSignLocation);
+                    var atSignLocation = line.IndexOf("@");
+                    line = line.Remove(atSignLocation, 1);
                     csharpCode.AppendLine(line);
                 }
                 else if (line.TrimStart().StartsWith("{") ||
@@ -69,7 +88,20 @@ namespace ViewNamespace
                 }
                 else
                 {
-                    csharpCode.AppendLine($"html.AppendLine(@\"{line.Replace("\"", "\"\"")}\");");
+                    csharpCode.Append($"html.AppendLine(@\"");
+
+                    while (line.Contains("@"))
+                    {
+                        var atSignLocation = line.IndexOf("@");
+                        var htmlBeforeAtSign = line.Substring(0, atSignLocation);
+                        csharpCode.Append(htmlBeforeAtSign.Replace("\"", "\"\"") + "\" + ");
+                        var lineAfterAtSign = line.Substring(atSignLocation + 1);
+                        var code = csharpCodeRegex.Match(lineAfterAtSign).Value;
+                        csharpCode.Append(code + " + @\"");
+                        line = lineAfterAtSign.Substring(code.Length);
+                    }
+
+                    csharpCode.AppendLine(line.Replace("\"", "\"\"") + "\");");
                 }
             }
 
@@ -114,7 +146,7 @@ namespace ViewNamespace
                     var assembly = Assembly.Load(byteAssembly);
                     var viewType = assembly.GetType("ViewNamespace.ViewClass");
                     var instance = Activator.CreateInstance(viewType);
-                    return instance as IView ?? new ErrorView(new List<string>{"Instance is null"}, csharpCode);
+                    return instance as IView ?? new ErrorView(new List<string> { "Instance is null" }, csharpCode);
                 }
                 catch (Exception e)
                 {
