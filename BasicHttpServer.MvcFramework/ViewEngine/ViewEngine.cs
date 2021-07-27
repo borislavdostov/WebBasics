@@ -20,11 +20,11 @@ namespace BasicHttpServer.MvcFramework.ViewEngine
             var csharpCode = @"
 using System;
 using System.Text;
-using System.Linq
+using System.Linq;
 using System.Collections.Generic;
 using BasicHttpServer.MvcFramework.ViewEngine;
 
-namespace ViewNameSpace
+namespace ViewNamespace
 {
     public class ViewClass : IView
     {
@@ -71,6 +71,7 @@ namespace ViewNameSpace
 
             compileResult.Emit("view.dll");
             return null;
+
             // Roslyn
             // C# -> executable -> IView -> ExecuteTemplate
         }
