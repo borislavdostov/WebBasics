@@ -196,6 +196,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.CodeAnalysis.CSharp": {
+              "target": "Package",
+              "version": "[3.10.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
