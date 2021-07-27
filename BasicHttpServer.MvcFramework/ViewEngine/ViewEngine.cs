@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
@@ -19,7 +22,6 @@ namespace BasicHttpServer.MvcFramework.ViewEngine
 
         private string GenerateCSharpFromTemplate(string templateCode)
         {
-            var methodBody = GetMethodBody(templateCode);
             var csharpCode = @"
 using System;
 using System.Text;
@@ -35,7 +37,7 @@ namespace ViewNamespace
         {
             var html = new StringBuilder();
 
-            " + methodBody + @"
+            " + GetMethodBody(templateCode) + @"
 
             return html.ToString();
         }
@@ -48,7 +50,30 @@ namespace ViewNamespace
 
         private object GetMethodBody(string templateCode)
         {
-            return string.Empty;
+            var csharpCode = new StringBuilder();
+            var stringReader = new StringReader(templateCode);
+            string line;
+
+            while ((line = stringReader.ReadLine()) != null)
+            {
+                if (line.TrimStart().StartsWith("@"))
+                {
+                    var atSignLocation = line.IndexOf("@", StringComparison.Ordinal);
+                    line = line.Remove(atSignLocation);
+                    csharpCode.AppendLine(line);
+                }
+                else if (line.TrimStart().StartsWith("{") ||
+                         line.TrimStart().StartsWith("}"))
+                {
+                    csharpCode.AppendLine(line);
+                }
+                else
+                {
+                    csharpCode.AppendLine($"html.AppendLine(@\"{line.Replace("\"", "\"\"")}\");");
+                }
+            }
+
+            return csharpCode.ToString();
         }
 
         private IView GenerateExecutableCode(string csharpCode, object viewModel)
@@ -82,12 +107,20 @@ namespace ViewNamespace
                             .Select(e => e.GetMessage()), csharpCode);
                 }
 
-                memoryStream.Seek(0, SeekOrigin.Begin);
-                var byteAssembly = memoryStream.ToArray();
-                var assembly = Assembly.Load(byteAssembly);
-                var viewType = assembly.GetType("ViewNamespace.ViewClass");
-                var instance = Activator.CreateInstance(viewType);
-                return instance as IView;
+                try
+                {
+                    memoryStream.Seek(0, SeekOrigin.Begin);
+                    var byteAssembly = memoryStream.ToArray();
+                    var assembly = Assembly.Load(byteAssembly);
+                    var viewType = assembly.GetType("ViewNamespace.ViewClass");
+                    var instance = Activator.CreateInstance(viewType);
+                    return instance as IView ?? new ErrorView(new List<string>{"Instance is null"}, csharpCode);
+                }
+                catch (Exception e)
+                {
+                    return new ErrorView(new List<string> { e.ToString() }, csharpCode);
+                }
+
             }
 
             // Roslyn
