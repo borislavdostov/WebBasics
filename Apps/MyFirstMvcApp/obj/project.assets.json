@@ -162,7 +162,7 @@
       "System.Runtime.CompilerServices.Unsafe/5.0.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -635,25 +635,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pc\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\bdost\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
+      "projectUniqueName": "C:\\Users\\bdost\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
       "projectName": "MyFirstMvcApp",
-      "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
-      "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\obj\\",
+      "projectPath": "C:\\Users\\bdost\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\MyFirstMvcApp.csproj",
+      "packagesPath": "C:\\Users\\bdost\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bdost\\Desktop\\basic-http-server\\Apps\\MyFirstMvcApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+        "C:\\Users\\bdost\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -666,11 +660,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj": {
-              "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj"
+            "C:\\Users\\bdost\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj": {
+              "projectPath": "C:\\Users\\bdost\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj"
             },
-            "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj": {
-              "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj"
+            "C:\\Users\\bdost\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj": {
+              "projectPath": "C:\\Users\\bdost\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj"
             }
           }
         }
@@ -684,10 +678,21 @@
     "frameworks": {
       "netcoreapp3.1": {
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

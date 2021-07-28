@@ -5,19 +5,19 @@ namespace MyFirstMvcApp.Controllers
 {
     public class UsersController : Controller
     {
-        public HttpResponse Login(HttpRequest request)
+        public HttpResponse Login()
         {
             return View();
 
         }
 
-        public HttpResponse Register(HttpRequest request)
+        public HttpResponse Register()
         {
             return View();
         }
 
         [HttpPost]
-        public HttpResponse DoLogin(HttpRequest request)
+        public HttpResponse DoLogin()
         {
             //TODO: Read data
             //TODO: Check user
