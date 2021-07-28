@@ -20,6 +20,13 @@ C:\Users\Pc\Desktop\BasicHttpServer\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\M
 C:\Users\Pc\Desktop\BasicHttpServer\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.genruntimeconfig.cache
 C:\Users\Pc\Desktop\BasicHttpServer\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\wwwroot\favicon.ico
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\MyFirstMvcApp.exe
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\MyFirstMvcApp.dll
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\System.Reflection.Metadata.dll
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\BasicHttpServer.HTTP.dll
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\BasicHttpServer.MvcFramework.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\Views\Cards\Add.cshtml
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\Views\Cards\All.cshtml
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\Views\Cards\Collection.cshtml
@@ -35,12 +42,7 @@ C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\MyFirstMvcApp.deps.json
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\MyFirstMvcApp.runtimeconfig.json
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\MyFirstMvcApp.runtimeconfig.dev.json
-C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\MyFirstMvcApp.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\MyFirstMvcApp.pdb
-C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
-C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\System.Reflection.Metadata.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
@@ -68,8 +70,6 @@ C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\BasicHttpServer.HTTP.dll
-C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\BasicHttpServer.MvcFramework.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\BasicHttpServer.HTTP.pdb
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\BasicHttpServer.MvcFramework.pdb
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.csproj.AssemblyReference.cache
@@ -80,3 +80,5 @@ C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.dll
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.pdb
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.genruntimeconfig.cache
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\Views\Home\About.cshtml
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\wwwroot\img\rabbit.jpg
