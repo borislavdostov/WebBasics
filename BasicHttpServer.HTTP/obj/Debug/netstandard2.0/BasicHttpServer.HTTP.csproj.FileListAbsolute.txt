@@ -19,9 +19,9 @@ C:\Users\Pc\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\bin\Debug\netstandard2.0\BasicHttpServer.HTTP.deps.json
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\bin\Debug\netstandard2.0\BasicHttpServer.HTTP.dll
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\bin\Debug\netstandard2.0\BasicHttpServer.HTTP.pdb
-C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.csprojAssemblyReference.cache
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.AssemblyInfoInputs.cache
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.AssemblyInfo.cs
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.csproj.CoreCompileInputs.cache
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.dll
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.pdb
+C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.csprojAssemblyReference.cache
