@@ -81,4 +81,4 @@ C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.pdb
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\obj\Debug\netcoreapp3.1\MyFirstMvcApp.genruntimeconfig.cache
 C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\Views\Home\About.cshtml
-C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\wwwroot\img\rabbit.jpg
+C:\Users\Pc\Desktop\basic-http-server\Apps\MyFirstMvcApp\bin\Debug\netcoreapp3.1\wwwroot\img\bunny.jpg

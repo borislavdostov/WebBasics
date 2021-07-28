@@ -20,24 +20,24 @@ namespace MyFirstMvcApp.Controllers
             return View();
         }
 
-        public HttpResponse BootstrapCss(HttpRequest arg)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public HttpResponse CustomCss(HttpRequest arg)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public HttpResponse CustomJs(HttpRequest arg)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public HttpResponse BootstrapJs(HttpRequest arg)
-        {
-            throw new System.NotImplementedException();
-        }
+        // public HttpResponse BootstrapCss(HttpRequest arg)
+        // {
+        //     throw new System.NotImplementedException();
+        // }
+        //
+        // public HttpResponse CustomCss(HttpRequest arg)
+        // {
+        //     throw new System.NotImplementedException();
+        // }
+        //
+        // public HttpResponse CustomJs(HttpRequest arg)
+        // {
+        //     throw new System.NotImplementedException();
+        // }
+        //
+        // public HttpResponse BootstrapJs(HttpRequest arg)
+        // {
+        //     throw new System.NotImplementedException();
+        // }
     }
 }

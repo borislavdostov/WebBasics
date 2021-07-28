@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using BasicHttpServer.HTTP;
 
@@ -12,6 +13,65 @@ namespace BasicHttpServer.MvcFramework
         {
             var routeTable = new List<Route>();
 
+            AutoRegisterStaticFiles(routeTable);
+            AutoRegisterRoutes(routeTable, application);
+
+            application.ConfigureServices();
+            application.Configure(routeTable);
+
+            Console.WriteLine("All registered routes:");
+            foreach (var route in routeTable)
+            {
+                Console.WriteLine($"{route.Method} {route.Path}");
+            }
+
+            IHttpServer server = new HttpServer(routeTable);
+
+            await server.StartAsync(port);
+        }
+
+        private static void AutoRegisterRoutes(List<Route> routeTable, IMvcApplication application)
+        {
+            var controllerTypes = application.GetType().Assembly.GetTypes().Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(Controller)));
+
+            foreach (var controllerType in controllerTypes)
+            {
+                var methods = controllerType.GetMethods()
+                    .Where(m => m.IsPublic && !m.IsStatic && m.DeclaringType == controllerType &&
+                                !m.IsAbstract && !m.IsConstructor && !m.IsSpecialName);
+
+                foreach (var method in methods)
+                {
+                    var url = "/" + controllerType.Name.Replace("Controller", string.Empty) + "/" + method.Name;
+
+                    var attribute = method.GetCustomAttributes(false)
+                        .FirstOrDefault(ca => ca.GetType().IsSubclassOf(typeof(BaseHttpAttribute))) as BaseHttpAttribute;
+
+                    var httpMethod = HttpMethod.Get;
+
+                    if (attribute != null)
+                    {
+                        httpMethod = attribute.Method;
+                    }
+
+                    if (!string.IsNullOrEmpty(attribute?.Url))
+                    {
+                        url = attribute.Url;
+                    }
+
+
+                    routeTable.Add(new Route(url, httpMethod, (request) =>
+                    {
+                        var instance = Activator.CreateInstance(controllerType);
+                        var response = method.Invoke(instance, new[] { request }) as HttpResponse;
+                        return response;
+                    }));
+                }
+            }
+        }
+
+        private static void AutoRegisterStaticFiles(List<Route> routeTable)
+        {
             var staticFiles = Directory.GetFiles("wwwroot", "*", SearchOption.AllDirectories);
             foreach (var staticFile in staticFiles)
             {
@@ -37,19 +97,6 @@ namespace BasicHttpServer.MvcFramework
                     return new HttpResponse(contentType, fileContent, HttpStatusCode.Ok);
                 }));
             }
-
-            application.ConfigureServices();
-            application.Configure(routeTable);
-
-            Console.WriteLine("All registered routes:");
-            foreach (var route in routeTable)
-            {
-                Console.WriteLine($"{route.Method} {route.Path}");
-            }
-
-            IHttpServer server = new HttpServer(routeTable);
-
-            await server.StartAsync(port);
         }
     }
 }
