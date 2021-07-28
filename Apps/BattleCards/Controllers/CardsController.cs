@@ -18,6 +18,11 @@ namespace BattleCards.Controllers
         {
             var dbContext = new ApplicationDbContext();
 
+            if (Request.FormData["name"].Length < 5)
+            {
+                return Error("Name should be atleast 5 characters long!");
+            }
+
             dbContext.Cards.Add(new Card
             {
                 Attack = int.Parse(Request.FormData["attack"]),

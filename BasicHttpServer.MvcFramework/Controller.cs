@@ -17,17 +17,13 @@ namespace BasicHttpServer.MvcFramework
 
         public HttpResponse View(object viewModel = null, [CallerMemberName] string viewPath = null)
         {
-            var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.cshtml");
-            layout = layout.Replace("@RenderBody()", "___VIEW_GOES_HERE___");
-            layout = viewEngine.GetHtml(layout, viewModel);
-
             var viewContent = System.IO.File.ReadAllText(
                 "Views/" +
                 GetType().Name.Replace("Controller", string.Empty) +
                 "/" + viewPath + ".cshtml");
             viewContent = viewEngine.GetHtml(viewContent, viewModel);
 
-            var responseHtml = layout.Replace("___VIEW_GOES_HERE___", viewContent);
+            var responseHtml = PutViewInLayout(viewContent, viewModel);
 
             var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
             var response = new HttpResponse("text/html", responseBodyBytes);
@@ -46,6 +42,25 @@ namespace BasicHttpServer.MvcFramework
             var response = new HttpResponse(HttpStatusCode.Found);
             response.Headers.Add(new Header("Location", url));
             return response;
+        }
+
+        public HttpResponse Error(string errorText)
+        {
+            var viewContent = $"<div class=\"alert alert-danger\" role=\"alert\">{errorText}</div>";
+            var responseHtml = PutViewInLayout(viewContent);
+
+            var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
+            var response = new HttpResponse("text/html", responseBodyBytes, HttpStatusCode.ServerError);
+            return response;
+        }
+
+        private string PutViewInLayout(string viewContent, object viewModel = null)
+        {
+            var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.cshtml");
+            layout = layout.Replace("@RenderBody()", "___VIEW_GOES_HERE___");
+            layout = viewEngine.GetHtml(layout, viewModel);
+            var responseHtml = layout.Replace("___VIEW_GOES_HERE___", viewContent);
+            return responseHtml;
         }
     }
 }

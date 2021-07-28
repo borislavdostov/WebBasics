@@ -27,7 +27,7 @@ C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.MvcFramework\bin\Debug\
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.csprojAssemblyReference.cache
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.AssemblyInfoInputs.cache
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.AssemblyInfo.cs
-C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.csproj.CoreCompileInputs.cache
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.csproj.CopyComplete
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.dll
 C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.pdb
+C:\Users\bdost\Desktop\basic-http-server\BasicHttpServer.MvcFramework\obj\Debug\netstandard2.0\BasicHttpServer.MvcFramework.csproj.CoreCompileInputs.cache

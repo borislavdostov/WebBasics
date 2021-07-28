@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wHDlc2puHq3hfNLrZO+C6jmLaVBf5I/4OFgIXe+32L7r+6K1J/sxiBcSuveRlVsnbV9Pl7m9PteM9AkD3xbHeg==",
+  "dgSpecHash": "YOYTiGBhGMhTrV8JNcSbk3z8QQhBsREd3Y7opPPUybMqFACO4ItS4wuYdjhvPgP3I6jrkBNqcB5o+M7n1r8pFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\bdost\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework.Tests\\BasicHttpServer.MvcFramework.Tests.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,7 @@
     "C:\\Users\\bdost\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\bdost\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\bdost\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
+    "C:\\Users\\bdost\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\bdost\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",
     "C:\\Users\\bdost\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\bdost\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.3.0\\system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",

@@ -8,6 +8,9 @@ namespace BasicHttpServer.HTTP
 {
     public class HttpRequest
     {
+        public static IDictionary<string, Dictionary<string, string>> Sessions =
+            new Dictionary<string, Dictionary<string, string>>();
+
         public HttpRequest(string requestString)
         {
             Headers = new List<Header>();
@@ -58,6 +61,24 @@ namespace BasicHttpServer.HTTP
                 }
             }
 
+            var sessionCookie = Cookies.FirstOrDefault(c => c.Name.Equals(HttpConstants.SessionCookieName));
+            if (sessionCookie == null)
+            {
+                var sessionId = Guid.NewGuid().ToString();
+                Session = new Dictionary<string, string>();
+                Sessions.Add(sessionId, new Dictionary<string, string>());
+                Cookies.Add(new Cookie(HttpConstants.SessionCookieName, sessionId));
+            }
+            else if (!Sessions.ContainsKey(sessionCookie.Value))
+            {
+                Session = new Dictionary<string, string>();
+                Sessions.Add(sessionCookie.Value, new Dictionary<string, string>());
+            }
+            else
+            {
+                Session = Sessions[sessionCookie.Value];
+            }
+
             Body = bodyBuilder.ToString();
             var parameters = Body.Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (var parameter in parameters)
@@ -78,6 +99,7 @@ namespace BasicHttpServer.HTTP
         public ICollection<Header> Headers { get; set; }
         public ICollection<Cookie> Cookies { get; set; }
         public IDictionary<string, string> FormData { get; set; }
+        public Dictionary<string, string> Session { get; set; }
         public string Body { get; set; }
     }
 }
