@@ -15,7 +15,7 @@ namespace BattleCards.Services
             db = new ApplicationDbContext();
         }
 
-        public void CreateUser(string username, string password, string email)
+        public string CreateUser(string username, string password, string email)
         {
             var user = new User
             {
@@ -27,12 +27,18 @@ namespace BattleCards.Services
 
             db.Users.Add(user);
             db.SaveChanges();
+            return user.Id;
         }
 
-        public bool IsUserValid(string username, string password)
+        public string GetUserId(string username, string password)
         {
             var user = db.Users.FirstOrDefault(u => u.Username.Equals(username));
-            return user != null && user.Password.Equals(ComputeHash(password));
+            if (user.Password != ComputeHash(password))
+            {
+                return null;
+            }
+
+            return user.Id;
         }
 
         public bool IsUsernameAvailable(string username)

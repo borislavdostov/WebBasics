@@ -79,7 +79,7 @@ namespace BasicHttpServer.HTTP
                 Session = Sessions[sessionCookie.Value];
             }
 
-            Body = bodyBuilder.ToString();
+            Body = bodyBuilder.ToString().TrimEnd('\n', '\r');
             var parameters = Body.Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (var parameter in parameters)
             {

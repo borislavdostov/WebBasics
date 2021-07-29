@@ -1,10 +1,20 @@
-﻿using BasicHttpServer.HTTP;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
+using BasicHttpServer.HTTP;
 using BasicHttpServer.MvcFramework;
+using BattleCards.Services;
 
 namespace BattleCards.Controllers
 {
     public class UsersController : Controller
     {
+        private readonly UsersService usersService;
+
+        public UsersController()
+        {
+            usersService = new UsersService();
+        }
+
         public HttpResponse Login()
         {
             return View();
@@ -13,7 +23,18 @@ namespace BattleCards.Controllers
         [HttpPost("/Users/Login")]
         public HttpResponse DoLogin()
         {
-            return View();
+            var username = Request.FormData["username"];
+            var password = Request.FormData["password"];
+            var userId = usersService.GetUserId(username, password);
+
+            if (userId == null)
+            {
+                return Error("Invalid username or password!");
+            }
+
+            SignIn(userId);
+            return Redirect("/Cards/All");
+
         }
 
         public HttpResponse Register()
@@ -24,10 +45,49 @@ namespace BattleCards.Controllers
         [HttpPost("/Users/Register")]
         public HttpResponse DoRegister()
         {
-            //TODO: Read data
-            //TODO: Check user
-            //TODO: Log user
-            return Redirect("/");
+            var username = Request.FormData["username"];
+            var email = Request.FormData["email"];
+            var password = Request.FormData["password"];
+            var confirmPassword = Request.FormData["confirmPassword"];
+
+            if (username == null || username.Length < 5 || username.Length > 20)
+            {
+                return Error("Invalid username! The username should be between 5 and 20 characters!");
+            }
+
+            if (!Regex.IsMatch(username, @"^[a-zA-Z0-9\.]+$"))
+            {
+                return Error("Invalid username! Only alphanumeric characters are allowed!");
+            }
+
+            if (string.IsNullOrWhiteSpace(email) || !new EmailAddressAttribute().IsValid(email))
+            {
+                return Error("Invalid email!");
+            }
+
+            if (password == null || password.Length < 6 || password.Length > 20)
+            {
+                return Error("Invalid password! The username should be between 6 and 20 characters!");
+            }
+
+            if (!password.Equals(confirmPassword))
+            {
+                return Error("Passwords should be the same!");
+            }
+
+            if (!usersService.IsUsernameAvailable(username))
+            {
+                return Error("Username already taken!");
+            }
+
+            if (!usersService.IsEmailAvailable(email))
+            {
+                return Error("Email already taken!");
+            }
+
+            var userId = usersService.CreateUser(username, password, email);
+
+            return Redirect("/Users/Login");
         }
 
         public HttpResponse Logout()
@@ -39,7 +99,6 @@ namespace BattleCards.Controllers
 
             SignOut();
             return Redirect("/");
-
         }
     }
 }

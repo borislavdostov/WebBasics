@@ -164,9 +164,6 @@ namespace ViewNamespace
                 }
 
             }
-
-            // Roslyn
-            // C# -> executable -> IView -> ExecuteTemplate
         }
     }
 }
