@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 namespace BattleCards.Data
 {
-    public class User : UserIdentity
+    public class User : IdentityUser<string>
     {
         public User()
         {
             Id = Guid.NewGuid().ToString();
+            Role = IdentityRole.User;
             Cards = new HashSet<UserCard>();
         }
 

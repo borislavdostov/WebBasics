@@ -122,7 +122,7 @@ namespace ViewNamespace
                     var genericArguments = viewModel.GetType().GenericTypeArguments;
                     foreach (var genericArgument in genericArguments)
                     {
-                        compileResult.AddReferences(MetadataReference.CreateFromFile(genericArgument));
+                        compileResult.AddReferences(MetadataReference.CreateFromFile(genericArgument.Assembly.Location));
                     }
                 }
 
