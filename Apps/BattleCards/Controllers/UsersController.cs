@@ -8,7 +8,12 @@ namespace BattleCards.Controllers
         public HttpResponse Login()
         {
             return View();
+        }
 
+        [HttpPost("/Users/Login")]
+        public HttpResponse DoLogin()
+        {
+            return View();
         }
 
         public HttpResponse Register()
@@ -16,13 +21,25 @@ namespace BattleCards.Controllers
             return View();
         }
 
-        [HttpPost]
-        public HttpResponse DoLogin()
+        [HttpPost("/Users/Register")]
+        public HttpResponse DoRegister()
         {
             //TODO: Read data
             //TODO: Check user
             //TODO: Log user
             return Redirect("/");
+        }
+
+        public HttpResponse Logout()
+        {
+            if (!IsUserSignedIn)
+            {
+                return Error("Only logged-in users can logout;");
+            }
+
+            SignOut();
+            return Redirect("/");
+
         }
     }
 }

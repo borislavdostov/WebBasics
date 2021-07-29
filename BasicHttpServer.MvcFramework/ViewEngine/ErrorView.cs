@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -16,7 +15,7 @@ namespace BasicHttpServer.MvcFramework.ViewEngine
             _csharpCode = csharpCode;
         }
 
-        public string ExecuteTemplate(object viewModel)
+        public string ExecuteTemplate(object viewModel, string user)
         {
             var html = new StringBuilder();
             html.AppendLine($"<h1>View compile {_errors.Count()} errors:</h1><ul>");

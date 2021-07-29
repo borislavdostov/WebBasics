@@ -22,7 +22,7 @@ namespace BasicHttpServer.MvcFramework
                 "Views/" +
                 GetType().Name.Replace("Controller", string.Empty) +
                 "/" + viewPath + ".cshtml");
-            viewContent = viewEngine.GetHtml(viewContent, viewModel);
+            viewContent = viewEngine.GetHtml(viewContent, viewModel, GetUserId);
 
             var responseHtml = PutViewInLayout(viewContent, viewModel);
 
@@ -65,7 +65,8 @@ namespace BasicHttpServer.MvcFramework
             Request.Session[UserIdSessionName] = null;
         }
 
-        protected bool IsUserSignedIn => Request.Session.ContainsKey(UserIdSessionName);
+        protected bool IsUserSignedIn => Request.Session.ContainsKey(UserIdSessionName) &&
+                                         Request.Session[UserIdSessionName] != null;
 
         protected string GetUserId => Request.Session.ContainsKey(UserIdSessionName) ? Request.Session[UserIdSessionName] : null;
 
@@ -73,7 +74,7 @@ namespace BasicHttpServer.MvcFramework
         {
             var layout = System.IO.File.ReadAllText("Views/Shared/_Layout.cshtml");
             layout = layout.Replace("@RenderBody()", "___VIEW_GOES_HERE___");
-            layout = viewEngine.GetHtml(layout, viewModel);
+            layout = viewEngine.GetHtml(layout, viewModel, GetUserId);
             var responseHtml = layout.Replace("___VIEW_GOES_HERE___", viewContent);
             return responseHtml;
         }
