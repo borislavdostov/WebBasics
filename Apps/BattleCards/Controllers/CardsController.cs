@@ -51,7 +51,7 @@ namespace BattleCards.Controllers
                 Type = c.Keyword
             }).ToList();
 
-            return View(new AllCardsViewModel { Cards = cardsViewModel });
+            return View(cardsViewModel);
         }
 
         public HttpResponse Collection()

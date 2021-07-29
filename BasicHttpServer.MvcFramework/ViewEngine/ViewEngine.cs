@@ -117,6 +117,15 @@ namespace ViewNamespace
 
             if (viewModel != null)
             {
+                if (viewModel.GetType().IsGenericType)
+                {
+                    var genericArguments = viewModel.GetType().GenericTypeArguments;
+                    foreach (var genericArgument in genericArguments)
+                    {
+                        compileResult.AddReferences(MetadataReference.CreateFromFile(genericArgument));
+                    }
+                }
+
                 compileResult = compileResult.AddReferences(MetadataReference.CreateFromFile(viewModel.GetType().Assembly.Location));
             }
 
