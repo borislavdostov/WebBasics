@@ -80,7 +80,7 @@ namespace BasicHttpServer.HTTP
             }
 
             Body = bodyBuilder.ToString().TrimEnd('\n', '\r');
-            var parameters = Body.Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+            var parameters = Body.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (var parameter in parameters)
             {
                 var parameterParts = parameter.Split(new [] {'='}, 2);
