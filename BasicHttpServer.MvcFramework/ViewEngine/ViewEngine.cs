@@ -123,11 +123,13 @@ namespace ViewNamespace
                     var genericArguments = viewModel.GetType().GenericTypeArguments;
                     foreach (var genericArgument in genericArguments)
                     {
-                        compileResult.AddReferences(MetadataReference.CreateFromFile(genericArgument.Assembly.Location));
+                        compileResult = compileResult
+                            .AddReferences(MetadataReference.CreateFromFile(genericArgument.Assembly.Location));
                     }
                 }
 
-                compileResult = compileResult.AddReferences(MetadataReference.CreateFromFile(viewModel.GetType().Assembly.Location));
+                compileResult = compileResult
+                    .AddReferences(MetadataReference.CreateFromFile(viewModel.GetType().Assembly.Location));
             }
 
             var libraries = Assembly.Load(new AssemblyName("netstandard")).GetReferencedAssemblies();
