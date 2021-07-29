@@ -67,7 +67,7 @@ namespace BasicHttpServer.MvcFramework
 
         protected bool IsUserSignedIn => Request.Session.ContainsKey(UserIdSessionName);
 
-        protected string GetUserId() => Request.Session[UserIdSessionName];
+        protected string GetUserId => Request.Session.ContainsKey(UserIdSessionName) ? Request.Session[UserIdSessionName] : null;
 
         protected string PutViewInLayout(string viewContent, object viewModel = null)
         {
