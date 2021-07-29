@@ -65,7 +65,7 @@ namespace BasicHttpServer.MvcFramework
             Request.Session[UserIdSessionName] = null;
         }
 
-        protected bool IsUserSignedIn => Request.Session[UserIdSessionName] != null;
+        protected bool IsUserSignedIn => Request.Session.ContainsKey(UserIdSessionName);
 
         protected string GetUserId() => Request.Session[UserIdSessionName];
 
