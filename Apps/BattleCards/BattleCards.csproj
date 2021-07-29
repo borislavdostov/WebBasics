@@ -71,4 +71,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\Users\" />
+  </ItemGroup>
+
 </Project>

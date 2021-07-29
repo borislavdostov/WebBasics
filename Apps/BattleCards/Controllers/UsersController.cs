@@ -26,15 +26,13 @@ namespace BattleCards.Controllers
         }
 
         [HttpPost("/Users/Login")]
-        public HttpResponse DoLogin()
+        public HttpResponse DoLogin(string username, string password)
         {
             if (IsUserSignedIn())
             {
                 return Redirect("/");
             }
 
-            var username = Request.FormData["username"];
-            var password = Request.FormData["password"];
             var userId = usersService.GetUserId(username, password);
 
             if (userId == null)
