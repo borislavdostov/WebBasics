@@ -58,17 +58,12 @@ namespace BattleCards.Controllers
         }
 
         [HttpPost("/Users/Register")]
-        public HttpResponse DoRegister()
+        public HttpResponse DoRegister(string username, string email, string password, string confirmPassword)
         {
             if (IsUserSignedIn())
             {
                 return Redirect("/");
             }
-
-            var username = Request.FormData["username"];
-            var email = Request.FormData["email"];
-            var password = Request.FormData["password"];
-            var confirmPassword = Request.FormData["confirmPassword"];
 
             if (username == null || username.Length < 5 || username.Length > 20)
             {

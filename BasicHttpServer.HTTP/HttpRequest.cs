@@ -16,6 +16,7 @@ namespace BasicHttpServer.HTTP
             Headers = new List<Header>();
             Cookies = new List<Cookie>();
             FormData = new Dictionary<string, string>();
+            QueryData = new Dictionary<string, string>();
 
             var lines = requestString.Split(new[] { HttpConstants.NewLine }, StringSplitOptions.None);
             var headerLine = lines[0];
@@ -79,26 +80,45 @@ namespace BasicHttpServer.HTTP
                 Session = Sessions[sessionCookie.Value];
             }
 
+            if (Path.Contains("?"))
+            {
+                var pathParts = Path.Split(new char[] { '?' }, 2);
+                Path = pathParts[0];
+                QueryString = pathParts[1];
+            }
+            else
+            {
+                QueryString = string.Empty;
+            }
+
             Body = bodyBuilder.ToString().TrimEnd('\n', '\r');
-            var parameters = Body.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+            SplitParameters(Body, FormData);
+            SplitParameters(QueryString, QueryData);
+        }
+
+        private static void SplitParameters(string parametersAsString, IDictionary<string, string> output)
+        {
+            var parameters = parametersAsString.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (var parameter in parameters)
             {
-                var parameterParts = parameter.Split(new [] {'='}, 2);
+                var parameterParts = parameter.Split(new[] { '=' }, 2);
                 var name = parameterParts[0];
                 var value = WebUtility.UrlDecode(parameterParts[1]);
 
-                if (!FormData.ContainsKey(name))
+                if (!output.ContainsKey(name))
                 {
-                    FormData.Add(name, value);
+                    output.Add(name, value);
                 }
             }
         }
 
         public HttpMethod Method { get; set; }
         public string Path { get; set; }
+        public string QueryString { get; set; }
         public ICollection<Header> Headers { get; set; }
         public ICollection<Cookie> Cookies { get; set; }
         public IDictionary<string, string> FormData { get; set; }
+        public IDictionary<string, string> QueryData { get; set; }
         public Dictionary<string, string> Session { get; set; }
         public string Body { get; set; }
     }
