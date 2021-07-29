@@ -17,12 +17,22 @@ namespace BattleCards.Controllers
 
         public HttpResponse Login()
         {
+            if (IsUserSignedIn())   
+            {
+                return Redirect("/");
+            }
+
             return View();
         }
 
         [HttpPost("/Users/Login")]
         public HttpResponse DoLogin()
         {
+            if (IsUserSignedIn())
+            {
+                return Redirect("/");
+            }
+
             var username = Request.FormData["username"];
             var password = Request.FormData["password"];
             var userId = usersService.GetUserId(username, password);
@@ -39,12 +49,22 @@ namespace BattleCards.Controllers
 
         public HttpResponse Register()
         {
+            if (IsUserSignedIn())
+            {
+                return Redirect("/");
+            }
+
             return View();
         }
 
         [HttpPost("/Users/Register")]
         public HttpResponse DoRegister()
         {
+            if (IsUserSignedIn())
+            {
+                return Redirect("/");
+            }
+
             var username = Request.FormData["username"];
             var email = Request.FormData["email"];
             var password = Request.FormData["password"];
@@ -92,7 +112,7 @@ namespace BattleCards.Controllers
 
         public HttpResponse Logout()
         {
-            if (!IsUserSignedIn)
+            if (!IsUserSignedIn())
             {
                 return Error("Only logged-in users can logout;");
             }

@@ -19,7 +19,8 @@ namespace BattleCards.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=DESKTOP-EMSIBGL\SQLEXPRESS;Database=BattleCards;Integrated Security=true;");
+                //optionsBuilder.UseSqlServer(@"Server=DESKTOP-EMSIBGL\SQLEXPRESS;Database=BattleCards;Integrated Security=true;");
+                optionsBuilder.UseSqlServer(@"Server=DESKTOP-7CMD3CO;Database=BattleCards;Integrated Security=true;");
             }
         }
 
