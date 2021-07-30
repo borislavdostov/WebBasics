@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kiJWZlhHDCuPFofe36mrJxo2NRvw0vmmrTNSUGTD26V62H7qsvJKti9BM3PmhE2tBmiuLXaiaJoqjHsI+KVKbw==",
+  "dgSpecHash": "TlyKc3NtfzXckB/ER6JViMYhq5wl00Mf5ADC2V7JP6GmgFsMZo+MdaHGUbVmTvBffH26XTSppstLQYABgzyCvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj",
+  "projectFilePath": "C:\\Users\\Pc\\Desktop\\web-basics\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.2\\microsoft.codeanalysis.analyzers.3.3.2.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.codeanalysis.common\\3.10.0\\microsoft.codeanalysis.common.3.10.0.nupkg.sha512",

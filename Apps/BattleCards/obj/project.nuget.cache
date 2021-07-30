@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zaB2FyswMq2sP8hr5MDjhGpLCsj+VZYTLWhPlV7QGEkmgUBqRw9zxfTZTacr9BDpJL25/MLbO/BXSq7Ht8ojrw==",
+  "dgSpecHash": "ASafMjsIWo/jK5X/hI+L+CiEPkR3MaSYls+zPHbTkeaoVp7Q561Mb/KXJs2Kb3hymD2OIV6pb5dfmyII3VAtGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\BattleCards\\BattleCards.csproj",
+  "projectFilePath": "C:\\Users\\Pc\\Desktop\\web-basics\\Apps\\BattleCards\\BattleCards.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.2\\microsoft.codeanalysis.analyzers.3.3.2.nupkg.sha512",

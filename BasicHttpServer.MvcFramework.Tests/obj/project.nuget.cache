@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V+7apf+tc3i4+u2lM5l/ZuMDrMluc/Im7MUaxv+k5kJnfGn9DNpGNMhkPGNn13xW9MFpcPtlTDM/N0/Iyaeajg==",
+  "dgSpecHash": "NLjndVMebmOMQs0uFxGPVwfhHO+QCd7w5m+O7kICqYvWqgxFbG26DVLIbNWwdDilr02X+fRNfxtzqcQTerlHWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework.Tests\\BasicHttpServer.MvcFramework.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Pc\\Desktop\\web-basics\\BasicHttpServer.MvcFramework.Tests\\BasicHttpServer.MvcFramework.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pc\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.2\\microsoft.codeanalysis.analyzers.3.3.2.nupkg.sha512",

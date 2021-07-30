@@ -6278,11 +6278,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\BattleCards\\BattleCards.csproj",
+      "projectUniqueName": "C:\\Users\\Pc\\Desktop\\web-basics\\Apps\\BattleCards\\BattleCards.csproj",
       "projectName": "BattleCards",
-      "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\BattleCards\\BattleCards.csproj",
+      "projectPath": "C:\\Users\\Pc\\Desktop\\web-basics\\Apps\\BattleCards\\BattleCards.csproj",
       "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\Apps\\BattleCards\\obj\\",
+      "outputPath": "C:\\Users\\Pc\\Desktop\\web-basics\\Apps\\BattleCards\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6304,11 +6304,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj": {
-              "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj"
+            "C:\\Users\\Pc\\Desktop\\web-basics\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj": {
+              "projectPath": "C:\\Users\\Pc\\Desktop\\web-basics\\BasicHttpServer.HTTP\\BasicHttpServer.HTTP.csproj"
             },
-            "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj": {
-              "projectPath": "C:\\Users\\Pc\\Desktop\\basic-http-server\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj"
+            "C:\\Users\\Pc\\Desktop\\web-basics\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj": {
+              "projectPath": "C:\\Users\\Pc\\Desktop\\web-basics\\BasicHttpServer.MvcFramework\\BasicHttpServer.MvcFramework.csproj"
             }
           }
         }
