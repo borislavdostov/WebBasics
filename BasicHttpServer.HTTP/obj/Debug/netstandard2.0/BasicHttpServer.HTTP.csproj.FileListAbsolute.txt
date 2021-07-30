@@ -24,3 +24,4 @@ C:\Users\Pc\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard
 C:\Users\Pc\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.dll
 C:\Users\Pc\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.pdb
+C:\Users\Pc\Desktop\basic-http-server\BasicHttpServer.HTTP\obj\Debug\netstandard2.0\BasicHttpServer.HTTP.csproj.AssemblyReference.cache

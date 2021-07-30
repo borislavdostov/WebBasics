@@ -21,11 +21,14 @@ namespace BasicHttpServer.MvcFramework
             AutoRegisterStaticFiles(routeTable);
             AutoRegisterRoutes(routeTable, application, serviceCollection);
 
-            Console.WriteLine("All registered routes:");
+            Console.WriteLine("Registered routes:");
             foreach (var route in routeTable)
             {
                 Console.WriteLine($"{route.Method} {route.Path}");
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Requests:");
 
             IHttpServer server = new HttpServer(routeTable);
 

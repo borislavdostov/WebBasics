@@ -1,19 +1,18 @@
-﻿using BasicHttpServer.HTTP;
+﻿using System;
+using BasicHttpServer.HTTP;
 using BasicHttpServer.MvcFramework;
-using BattleCards.Data;
-using BattleCards.ViewModels;
 using BattleCards.ViewModels.Cards;
-using System.Linq;
+using BattleCards.Services;
 
 namespace BattleCards.Controllers
 {
     public class CardsController : Controller
     {
-        private readonly ApplicationDbContext db;
+        private readonly ICardsService cardsService;
 
-        public CardsController(ApplicationDbContext db)
+        public CardsController(ICardsService cardsService)
         {
-            this.db = db;
+            this.cardsService = cardsService;
         }
 
         public HttpResponse Add()
@@ -26,30 +25,51 @@ namespace BattleCards.Controllers
             return View();
         }
 
-        [HttpPost("/Cards/Add")]
-        public HttpResponse DoAdd(AddCardInputModel model)
+        [HttpPost]
+        public HttpResponse Add(AddCardInputModel model)
         {
             if (!IsUserSignedIn())
             {
                 return Redirect("/Users/Login");
             }
 
-            if (Request.FormData["name"].Length < 5)
+            if (string.IsNullOrEmpty(model.Name) || model.Name.Length < 5 || model.Name.Length > 15)
             {
-                return Error("Name should be atleast 5 characters long!");
+                return Error("Name should be between 5 and 15 characters long!");
             }
 
-            db.Cards.Add(new Card
+            if (string.IsNullOrWhiteSpace(model.Image))
             {
-                Attack = model.Attack,
-                Health = model.Health,
-                Description = model.Description,
-                Name = model.Name,
-                ImageUrl = model.Image,
-                Keyword = model.Keyword
-            });
+                return Error("The image is required!");
+            }
 
-            db.SaveChanges();
+            if (!Uri.TryCreate(model.Image, UriKind.Absolute, out _))
+            {
+                return Error("Image url should be valid!");
+            }
+
+            if (string.IsNullOrWhiteSpace(model.Keyword))
+            {
+                return Error("Keyword is required!");
+            }
+
+            if (model.Attack < 0)
+            {
+                return Error("Attack should be non-negative integer!");
+            }
+
+            if (model.Health < 0)
+            {
+                return Error("Health should be non-negative integer!");
+            }
+
+            if (string.IsNullOrWhiteSpace(model.Description) || model.Description.Length > 200)
+            {
+                return Error("Description is required and its length should be at most to 200 characters!");
+            }
+
+            var cardId = cardsService.AddCard(model);
+            cardsService.AddCardToUserCollection(GetUserId(), cardId);
 
             return Redirect("/Cards/All");
         }
@@ -61,16 +81,7 @@ namespace BattleCards.Controllers
                 return Redirect("/Users/Login");
             }
 
-            var cardsViewModel = db.Cards.Select(c => new CardViewModel
-            {
-                Name = c.Name,
-                Description = c.Description,
-                Attack = c.Attack,
-                Health = c.Health,
-                ImageUrl = c.ImageUrl,
-                Type = c.Keyword
-            }).ToList();
-
+            var cardsViewModel = cardsService.GetAll();
             return View(cardsViewModel);
         }
 
@@ -81,7 +92,30 @@ namespace BattleCards.Controllers
                 return Redirect("/Users/Login");
             }
 
-            return View();
+            var cardsViewModel = cardsService.GetByUserId(GetUserId());
+            return View(cardsViewModel);
+        }
+
+        public HttpResponse AddToCollection(int cardId)
+        {
+            if (!IsUserSignedIn())
+            {
+                return Redirect("/Users/Login");
+            }
+
+            cardsService.AddCardToUserCollection(GetUserId(), cardId);
+            return Redirect("/Cards/All");
+        }
+
+        public HttpResponse RemoveFromCollection(int cardId)
+        {
+            if (!IsUserSignedIn())
+            {
+                return Redirect("/Users/Login");
+            }
+
+            cardsService.RemoveCardToUserCollection(GetUserId(), cardId);
+            return Redirect("/Cards/Collection");
         }
     }
 }
